@@ -4,10 +4,10 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductsModule } from './products/products.module';
 
-const DBURI = process.env.DBURI || 'mongodb://productListUser:productListPassword@192.168.1.55/promotions?authSource=admin';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://productListUser:productListPassword@192.168.1.55/promotions?authSource=admin';
 
 @Module({
-  imports: [MongooseModule.forRoot(DBURI), ProductsModule],
+  imports: [MongooseModule.forRoot(MONGODB_URI), ProductsModule],
   controllers: [AppController],
   providers: [AppService],
 })
