@@ -6,6 +6,11 @@ on:
       - master
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ejecucion de las pruebas unitarias
+        run: npm install && npm run test  
   build:
     runs-on: ubuntu-latest
     steps:
