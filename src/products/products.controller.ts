@@ -3,7 +3,7 @@ import { Product, IProduct } from './product.schema';
 import { ProductsService } from './products.service';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('cats')
+@ApiTags('products')
 @Controller('products')
 export class ProductsController {
 
@@ -12,7 +12,7 @@ export class ProductsController {
     @Get()
     @ApiResponse({
       status: 200,
-      description: 'Catálogo de productos',
+      description: 'Products Catalog',
       type: Product,
     })
     async findAll(): Promise<IProduct[]> {

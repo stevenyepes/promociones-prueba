@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Document } from "mongoose";
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export interface IProduct {
     id: number;
@@ -8,7 +8,7 @@ export interface IProduct {
     description: string;
     image: string;
     price: number;
-
+    priceWithDiscount?: number;
 }
 
 @Schema()
@@ -33,6 +33,11 @@ export class Product extends Document implements IProduct{
     @ApiProperty({ example: 200, description: 'Precio del producto' })
     @Prop()
     price: IProduct['price'];
+
+    @ApiPropertyOptional({ example: 100, description: 'Precio del producto con descuento' })
+    @Prop()
+    priceWithDiscount?: IProduct['priceWithDiscount'];
+   
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
