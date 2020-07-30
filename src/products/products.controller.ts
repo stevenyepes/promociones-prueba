@@ -26,8 +26,9 @@ export class ProductsController {
       type: Product,
     })
     async find(@Param('search') search: string): Promise<IProduct[]> {
-      if(Number(search)){
-        return this.productsService.findById(Number(search));
+      const id = Number(search);
+      if(id){
+        return this.productsService.findById(Number(id));
       }
       return this.productsService.findByBrandOrDescription(search);
     }
