@@ -8,7 +8,7 @@ export class ProductsService {
     constructor(@InjectModel(Product.name) private productRepository: Model<Product>) {}
 
     async findAll(): Promise<IProduct[]> {
-        return this.productRepository.find().exec();
+        return this.productRepository.find();
     }
 
     async findById(id: number): Promise<IProduct[]> {
@@ -41,9 +41,9 @@ export class ProductsService {
 
 
     private isPalindrome = (word: string) =>  {
-        var re = /[\W_]/g;
-        var lowRegStr = word.toLowerCase().replace(re, '');
-        var reverseStr = lowRegStr.split('').reverse().join(''); 
+        const re = /[\W_]/g;
+        const lowRegStr = word.toLowerCase().replace(re, '');
+        const reverseStr = lowRegStr.split('').reverse().join(''); 
         return reverseStr === lowRegStr;
     }
 
