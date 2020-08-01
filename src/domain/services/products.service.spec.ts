@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductsService } from './products.service';
-import { Product, IProduct } from "./product.schema";
+import { Product, IProduct } from '../entities/product.schema';
 import { getModelToken } from '@nestjs/mongoose';
 
 describe('ProductsService', () => {

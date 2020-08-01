@@ -2,11 +2,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication, HttpService, HttpModule } from '@nestjs/common';
 import * as request from 'supertest';
-import { AxiosResponse } from 'axios';
-import { of } from 'rxjs';
-import { ProductsService } from './../src/products/products.service';
+import { ProductsService } from '../src/domain/services/products.service';
 import { ProductsModule } from './../src/products/products.module';
-import { IProduct, Product } from './../src/products/product.schema';
+import { IProduct, Product } from './../src/domain/entities/product.schema';
 import { getModelToken } from '@nestjs/mongoose';
 
 

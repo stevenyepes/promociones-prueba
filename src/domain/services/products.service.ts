@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Product, IProduct } from './product.schema';
+import { Product, IProduct } from '../entities/product.schema';
 import { Model } from "mongoose";
 import { InjectModel } from '@nestjs/mongoose';
 
