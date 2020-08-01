@@ -1,10 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductsController } from './products.controller';
-import { ProductsService } from './products.service';
-import { IProduct } from './product.schema';
-import { resolve } from 'path';
-import { rejects } from 'assert';
-jest.mock('./products.service');
+import { ProductsService } from '../../domain/services/products.service';
+import { IProduct } from '../../domain/entities/product.schema';
+
+jest.mock('../../domain/services/products.service');
 
 describe('Products Controller', () => {
   let controller: ProductsController;
