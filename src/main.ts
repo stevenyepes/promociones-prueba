@@ -9,9 +9,9 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
 
-   .setTitle('Products example')
+   .setTitle('Products walmart API')
 
-   .setDescription('The Products API description')
+   .setDescription('The Products API')
 
    .setVersion('1.0')
 
