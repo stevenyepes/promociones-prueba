@@ -39,7 +39,7 @@ $ npm run test:cov
 ```
 
 ## Docker
-- Cambiar la ip utilizada en la uri de la base de datos por la ip local: mongodb://productListUser:productListPassword@[tu-ip]/promotions?authSource=admin 
+- Cambiar la ip utilizada en la uri de la base de datos en el archivo docker-compose.yml por la ip local: mongodb://productListUser:productListPassword@[tu-ip]/promotions?authSource=admin 
 
 ```bash
 # Construir la imágen
@@ -47,6 +47,7 @@ $ docker-compose build
 
 # Levantar entorno
 $ docker-compose up
+```
 
 ## Documentación
 
