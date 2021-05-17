@@ -12,7 +12,7 @@ export class ProductsService {
     }
 
     async findById(id: number): Promise<IProduct[]> {
-        let product = await this.productRepository.find({'id': id},{_id:0});
+        const product = await this.productRepository.find({'id': id},{_id:0});
         return this.validateAndApplyDiscount(product, id.toString())
     }
 
@@ -22,7 +22,7 @@ export class ProductsService {
                     {description: { $regex: '.*' + search + '.*'}}
                 ]
         }
-        let products = await this.productRepository.find(queryParams, {_id:0});
+        const products = await this.productRepository.find(queryParams, {_id:0});
         return this.validateAndApplyDiscount(products, search)
     }
 

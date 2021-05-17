@@ -16,27 +16,27 @@ export class Product extends Document implements IProduct{
     
     @Prop()
     @ApiProperty({ example: 1, description: 'Identificador único del producto' })
-    id: IProduct['id'];
+    id: number;
 
     @ApiProperty({ example: 'weñxoab', description: 'Marca del producto' })
     @Prop()
-    brand: IProduct['brand'];
+    brand: string;
     
     @ApiProperty({ example: 'pnyn rlxbewnk', description: 'Descripción del producto' })
     @Prop()
-    description: IProduct['description'];
+    description: string;
 
     @ApiProperty({ example: 'trcwl iagxxh', description: 'URI de la imágen' })
     @Prop()
-    image: IProduct['image'];
+    image: string;
 
     @ApiProperty({ example: 200, description: 'Precio del producto' })
     @Prop()
-    price: IProduct['price'];
+    price: number;
 
     @ApiPropertyOptional({ example: 100, description: 'Precio del producto con descuento' })
     @Prop()
-    priceWithDiscount?: IProduct['priceWithDiscount'];
+    priceWithDiscount?: number;
    
 }
 
