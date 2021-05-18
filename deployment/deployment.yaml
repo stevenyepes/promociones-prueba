@@ -23,4 +23,10 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
+        env:
+        - name: MONGODB_URI
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: promotions-walmart-db-uri
 status: {}
