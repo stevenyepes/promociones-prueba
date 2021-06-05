@@ -21,12 +21,12 @@ spec:
       - image: localhost:5000/walmart-api
         name: walmart-api
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
         resources: {}
         env:
         - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
-              name: mysecret
+              name: walmart-api-secret 
               key: promotions-walmart-db-uri
 status: {}
