@@ -6,7 +6,7 @@ metadata:
     app: walmart-api
   name: walmart-api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: walmart-api
