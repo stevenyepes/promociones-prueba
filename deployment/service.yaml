@@ -8,6 +8,7 @@ metadata:
   name: walmart-api
   namespace: walmart
 spec:
+  type: NodePort
   ports:
   - port: 3000
     protocol: TCP
